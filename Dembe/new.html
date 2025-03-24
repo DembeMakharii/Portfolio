@@ -1,0 +1,112 @@
+<!-- Certificates Section -->
+<section id="certificates" class="certificates-section">
+    <h2>Certificates</h2>
+    
+    <p id="typewriter-text" class="typewriter">These are some of my certificates...</p>
+    <ul class="certificates-list">
+        <li>
+            <a href="#" data-issued-by="Microsoft" data-certificate-link="https://learn.microsoft.com/api/credentials/share/en-us/DembeMakhari-1364/84DD4B5421B33124?sharingId=96B5030268F5E30">
+                <img src="micro.png" alt="Microsoft Icon" class="certificate-icon">Dynamic 365 Fundamentals
+            </a>
+        </li>
+        <li>
+            <a href="#" data-issued-by="Microsoft" data-certificate-link="https://learn.microsoft.com/en-us/users/dembemakhari-1364/credentials/certification/azure-ai-engineer?tab=credentials-tab">
+                <img src="micro.png" alt="Microsoft Icon" class="certificate-icon">Azure AI Engineer Associate
+            </a>
+        </li>
+        <!-- Add more certificates here -->
+    </ul>
+
+    <!-- Certificate Details Container -->
+    <div id="certificate-details" class="certificate-details">
+        <h3 id="certificate-title"></h3>
+        <p id="certificate-issued-by"></p>
+        <a id="certificate-link" href="#" target="_blank">View Certificate</a>
+    </div>
+</section>
+
+<!-- Styles for certificate icon -->
+<style>
+    .certificate-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .certificates-list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .certificates-list a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .certificates-list a:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    /* Typewriter effect */
+    .typewriter {
+        font-family: Courier, monospace;
+        font-size: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid black; /* Cursor effect */
+        width: 0;
+        animation: typing 4s steps(40) 1s infinite, blink 0.75s step-end infinite;
+    }
+
+    /* Typing animation */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    /* Cursor blinking effect */
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+</style>
+
+<!-- JavaScript for typewriter effect -->
+<script>
+    const textElement = document.getElementById('typewriter-text');
+    const text = textElement.textContent;
+    
+    let index = 0;
+    const typingSpeed = 100; // Speed of typing in milliseconds
+    const pauseDuration = 1000; // Duration to pause before restarting the animation
+    
+    // Function to animate the typing
+    function typeWriter() {
+        if (index < text.length) {
+            textElement.textContent = text.slice(0, index + 1); // Update the text
+            index++;
+            setTimeout(typeWriter, typingSpeed); // Continue typing
+        } else {
+            setTimeout(() => {
+                index = 0; // Reset to the beginning
+                typeWriter(); // Restart typing
+            }, pauseDuration); // Pause before restarting
+        }
+    }
+
+    // Start typing when the page loads
+    window.onload = typeWriter;
+</script>

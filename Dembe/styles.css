@@ -1,0 +1,910 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Hamburger Menu */
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.menu-wrap .hamburger > div::after {
+    top: 10px;
+}
+
+.menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked + .hamburger > div::before,
+.menu-wrap .toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+
+.menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.75s;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .menu > div {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover {
+    color: #f4f4f4;
+}
+
+.profile-photo {
+    width: 200px; /* Increased size */
+    height: 200px; /* Increased size */
+    border-radius: 50%; /* Ensures the image remains circular */
+    margin-bottom: 1.5rem; /* Slightly more space below the photo */
+    border: 3px solid #fff; /* Adds a white border around the photo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.profile-photo:hover {
+    transform: scale(1.1); /* Slightly enlarges the photo on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+/* Sections */
+.about-section {
+    padding: 40px 20px; /* Adds padding around the section */
+    background-color: #f9f9f9; /* Optional: Adds a light background */
+    width: 100%; /* Ensures the section takes full width */
+}
+
+.about-content {
+    display: flex;
+    align-items: center; /* Aligns the photo and text vertically */
+    gap: 40px; /* Adds space between the photo and text */
+    max-width: 1200px; /* Limits the width of the content */
+    margin: 0 auto; /* Centers the content */
+    width: 100%; /* Ensures the container takes full width */
+}
+
+.about-photo {
+    border-radius: 10px;
+    height: 500px;
+    margin-right: 2rem; /* Adds space between the photo and text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures the image doesn't overflow the container */
+}
+
+.about-photo img {
+    border-radius: 10px; /* Matches the container's border radius */
+    width: 100%; /* Ensures the image takes the full width of the container */
+    height: 100%; /* Ensures the image takes the full height of the container */
+    object-fit:fill; /* Ensures the image covers the entire area without distortion */
+}
+
+.about-text {
+    flex: 1; /* Allows the text to take up remaining space */
+}
+
+.animated-text {
+    font-size: 1.1rem; /* Adjusts the text size */
+    line-height: 1.6; /* Improves readability */
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Breakpoint for Smaller Screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stacks the photo and text vertically */
+        text-align: center; /* Centers the text */
+    }
+
+    .about-photo {
+        width: 100%; /* Makes the photo take full width on smaller screens */
+        height: auto; /* Adjusts height automatically */
+        margin-right: 0; /* Removes the right margin */
+        margin-bottom: 2rem; /* Adds space below the photo */
+    }
+
+    .about-photo img {
+        height: auto; /* Ensures the image scales properly */
+    }
+}
+.education-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.education-list li {
+    margin-bottom: 15px;
+}
+
+.education-list strong {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.education-list em {
+    color: #777;
+    font-size: 0.9em;
+}
+
+
+/* Skills Section */
+.skills-section {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.skill-category {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.skill-name {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.skill-percent {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+.certificates-section {
+    background-color: #b0b0b0;
+}
+
+.certificates-section li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.certificates-section p {
+    font-size: 18px; /* Increased font size for the paragraph */
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.contact-container {
+    display: flex; /* Use Flexbox to align items side by side */
+    gap: 2rem; /* Space between contact info and form */
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Contact Info (Left Side) */
+.contact-info {
+    flex: 1; /* Take up 1 part of the available space */
+    text-align: left; /* Align text to the left */
+    padding: 1rem;
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-info h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;
+    color: #0078d4; /* Icon color */
+}
+
+/* Contact Form (Right Side) */
+.contact-form {
+    flex: 2; /* Take up 2 parts of the available space */
+    padding: 1rem;
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #0078d4; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+}
+
+/* Form Status Message */
+#formStatus {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Chatbot */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chatbot-icon {
+    background-color: #333;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.chatbot-window {
+    display: none;
+    width: 400px;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+}
+
+.chatbot-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-body {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.chatbot-input {
+    display: flex;
+    padding: 200px;
+    padding-left: 20px;
+    
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chatbot-input button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn {
+    cursor: pointer;
+}
+
+.chat-message {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.user-message {
+    background-color: #00070f; /* Blue background for user messages */
+    color: white; /* White text for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.bot-message {
+    background-color: #f1f1f1; /* Light gray background for bot messages */
+    color: black; /* Black text for bot messages */
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Home Section */
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background.jpg'); /* Add your background image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    text-align: center;
+    padding: 0 20px;
+    color: #0e0d0d; /* Change text color to white for better contrast */
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #0a0000; /* Change text color to white */
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.home-content .typewriter {
+    font-weight: 600;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
+    align-items: center;
+    margin-bottom: 20px; /* Add some space between the typewriter text and the button */
+}
+
+.home-content .typewriter span {
+    color: rgb(15, 10, 1);
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px rgb(2, 1, 0);
+    position: relative;
+    transition: 0.3s linear;
+}
+
+.typewriter span::before {
+    content: "Software Developer";
+    animation: words 10s infinite;
+}
+
+.typewriter span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    animation: cursor 0.5s linear infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words {
+    0% {
+        content: "Software Developer";
+    }
+    50% {
+        content: "Software Engineer";
+    }
+    100% {
+        content: "Salesforce Developer";
+    }
+}
+
+/* Typewriter Effect */
+.typewriter {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem; /* Adjust to your preference */
+    line-height: 1; /* Ensures text stays in one line */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.typewriter span {
+    display: inline-block;
+}
+
+.typewriter span::after {
+    content: ''; /* Adds the cursor effect */
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #555;
+    transform: translateY(-5px);
+}
+
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #030000; /* Change icon color to white */
+    font-size: 30px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #0077b5; /* LinkedIn blue */
+    transform: scale(1.2);
+}
+
+.social-icon.fa-github:hover {
+    color: #fff; /* GitHub white */
+}
+
+.social-icon.fa-youtube:hover {
+    color: #ff0000; /* YouTube red */
+}
+
+
+/* About Photo Container */
+.about-photo {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 10px; /* Rounded corners for the container */
+    overflow: hidden; /* Ensures the image stays within the rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Adds a strong shadow */
+    border: 2px solid #fff; /* Adds a thick white border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.about-photo:hover {
+    transform: scale(1.05); /* Slightly enlarges the container on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+/* About Photo Image */
+.about-photo img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    border-radius: 15px; /* Slightly rounded corners for the image */
+    transition: transform 0.3s ease; /* Smooth hover effect for the image */
+}
+
+.about-photo:hover img {
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.about-text .cta-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-text .cta-button:hover {
+    background-color: #555;
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Animation for the About Me text */
+.animated-text {
+    opacity: 0; /* Start with invisible text */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeInUp 1s ease-in-out 0.5s forwards; /* Animation with delay */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Certificates Section */
+.certificates-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.certificates-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.certificates-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificates-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.certificates-list a {
+    text-decoration: none;
+    color: #0078d4;
+    font-weight: bold;
+}
+
+.certificates-list a:hover {
+    text-decoration: underline;
+}
+
+/* Certificate Details Container */
+.certificate-details {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#certificate-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#certificate-issued-by {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+#certificate-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0078d4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#certificate-link:hover {
+    background-color: #005bb5;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%; /* Ensure the footer spans the full width */
+     /* Fix the footer to the bottom of the viewport */
+    bottom: 0; /* Stick it to the bottom */
+    left: 0; /* Align it to the left edge */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0078d4; /* LinkedIn blue for consistency */
+}
+
+/* Style for the image icon */
+.certificate-icon {
+    width: 20px;                  /* Adjust the size of the icon */
+    height: 20px;                 /* Make it square */
+    margin-right: 10px;           /* Space between the icon and text */
+    vertical-align: middle;       /* Align the image with the text */
+}
