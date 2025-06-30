@@ -63,6 +63,31 @@ document.getElementById('chatbot-input').addEventListener('keypress', function (
     }
 });
 
+// Projects section interaction
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.querySelector('.project-info').style.transform = 'translateY(0)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.querySelector('.project-info').style.transform = 'translateY(0)';
+        });
+    });
+    
+    // Smooth scrolling for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
 // Get all certificate links
 const certificateLinks = document.querySelectorAll('.certificates-list a');
 
