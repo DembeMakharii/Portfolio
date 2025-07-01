@@ -3,7 +3,8 @@
 
 A professional portfolio website showcasing my skills, projects, certificates, and contact information. Built with modern web technologies and designed to be fully responsive across all devices.
 
-![Portfolio Screenshot](https://via.placeholder.com/800x500?text=Portfolio+Screenshot)
+![Screenshot (107)](https://github.com/user-attachments/assets/c174bff3-0b6d-4391-9261-0977eaf1b2ba)
+
 
 ## 📋 Table of Contents
 - [Features](#✨-features)
@@ -32,21 +33,21 @@ Feature | Description
 - **Hosting**: GitHub Pages (or your hosting provider)
 
 ## 📂 Project Structure
-portfolio/
-├── index.html # Main HTML file
-├── styles.css # All CSS styles
-├── script.js # JavaScript functionality
-├── images/ # Project images and icons
-│ ├── Dembe.jpg # Profile photo
-│ ├── micro.png # Microsoft icon
-│ ├── cisco.png # Cisco icon
-│ ├── ibm.png # IBM icon
-│ ├── forti.png # Fortinet icon
-│ ├── Python.png # Python icon
-│ ├── project1.jpg # Morse Code Translator screenshot
-│ ├── project2.jpg # Movie Database screenshot
-│ └── project3.jpg # Safety System screenshot
-└── README.md # This documentation file
+portfolio/ <br>
+├── index.html # Main HTML file <br>
+├── styles.css # All CSS styles <br>
+├── script.js # JavaScript functionality <br>
+├── images/ # Project images and icons <br>
+│ ├── Dembe.jpg # Profile photo <br>
+│ ├── micro.png # Microsoft icon <br>
+│ ├── cisco.png # Cisco icon <br>
+│ ├── ibm.png # IBM icon <br>
+│ ├── forti.png # Fortinet icon <br>
+│ ├── Python.png # Python icon <br>
+│ ├── project1.jpg # Morse Code Translator screenshot <br>
+│ ├── project2.jpg # Movie Database screenshot <br>
+│ └── project3.jpg # Safety System screenshot <br>
+└── README.md # This documentation file <br>
 
 
 ## 🚀 Installation
@@ -58,6 +59,8 @@ Open in browser:
 
 Simply open index.html in your preferred web browser
 
+
+
 Or deploy to your preferred hosting service
 
 Customize:
@@ -68,7 +71,8 @@ Update personal information in HTML files
 
 Modify colors in CSS to match your brand
 
-📜 License
+
+## 📜 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 MIT License
 
@@ -92,7 +96,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-📧 Contact
+## 📧 Contact
 Name: Dembe Makhari
 
 Email: dmakhari6@gmail.com
@@ -103,4 +107,4 @@ Location: Pretoria, South Africa
 
 LinkedIn: Dembe Makhari
 
-GitHub: DembeMakhari
+GitHub: DembeMakharii
