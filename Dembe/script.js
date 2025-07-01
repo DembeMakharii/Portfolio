@@ -115,3 +115,4 @@ certificateLinks.forEach(link => {
         document.getElementById('certificate-details').scrollIntoView({ behavior: 'smooth' });
     });
 });
+
