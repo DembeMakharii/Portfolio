@@ -6,532 +6,617 @@
     <title>Dembe Makhari - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
 </head>
-<body>
-    <!-- Hamburger Menu -->
-    <div class="menu-wrap">
-        <input type="checkbox" class="toggler">
-        <div class="hamburger"><div></div></div>
-        <div class="menu">
-            <div>
-                <div>
-                    <ul>
-                        <li><img src="Dembe.jpg" alt="Profile Photo" class="profile-photo"></li>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#certificates">Certificates</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<body class="light-theme">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+        <div class="preloader-text">Loading Portfolio...</div>
     </div>
 
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+    <img src="images/Dembe.jpg" alt="Logo" class="nav-logo-img">
+</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" class="theme-switch">
+                <label for="theme-switch" class="theme-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="theme-ball"></span>
+                </label>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
     <section id="home" class="home-section">
+        <div class="parallax-bg"></div>
+        <div class="particles-js" id="particles-js"></div>
         <div class="home-content">
-            <h1>Dembe Makhari</h1>
-            <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
-            <a href="#about" class="cta-button">Learn More About Me</a>
-    
+            <h1 data-aos="fade-down" data-aos-duration="1000">Dembe Makhari</h1>
+            <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
+                <span id="typed"></span>
+            </div>
+            
+            <!-- Tech Stack Icons -->
+            <div class="tech-stack" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                <i class="fab fa-html5" title="HTML5"></i>
+                <i class="fab fa-css3-alt" title="CSS3"></i>
+                <i class="fab fa-js" title="JavaScript"></i>
+                <i class="fab fa-python" title="Python"></i>
+                <i class="fab fa-java" title="Java"></i>
+                <i class="fas fa-database" title="SQL"></i>
+                <i class="fab fa-microsoft" title=".NET"></i>
+                <i class="fab fa-aws" title="AWS"></i>
+                <i class="fab fa-react" title="React"></i>
+            </div>
+            
+            <div class="cta-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500">
+                <a href="#about" class="cta-button">Learn More</a>
+                <a href="#contact" class="cta-button secondary">Contact Me</a>
+            </div>
+
             <!-- Social Media Links with Icons -->
-            <div class="social-links">
+            <div class="social-links" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1800">
                 <a href="https://www.linkedin.com/in/dembe-makhari-1a6a4b214/" target="_blank" class="social-icon">
-                    <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+                    <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://github.com/DembeMakharii" target="_blank" class="social-icon">
-                    <i class="fab fa-github"></i> <!-- GitHub Icon -->
+                    <i class="fab fa-github"></i>
                 </a>
                 <a href="https://www.youtube.com/@miraclebaby_" target="_blank" class="social-icon">
-                    <i class="fab fa-youtube"></i> <!-- YouTube Icon -->
+                    <i class="fab fa-youtube"></i>
                 </a>
             </div>
         </div>
     </section>
     
-
-<!-- About Section -->
-<section id="about" class="about-section">
-    <div class="about-content">
-        <div class="about-photo" style="background-image:url('image.jpg') ;background-size: cover; background-position: center; background-repeat: no-repeat; ">
-            <!--<img src="about.jpg" alt="About Photo">-->
-        </div>
-        <div class="about-text">
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header" data-aos="fade-up">
             <h2>About Me</h2>
-            <p class="animated-text">Hi, I'm Dembe Makhari, a passionate software developer with experience in building web applications and solving complex problems. I specialize in creating efficient, scalable, and user-friendly solutions that drive business success.</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-photo glassmorphism" data-aos="fade-right">
+    <img src="images/Image.jpg" alt="Dembe Makhari" class="about-photo-img">
+    <div class="glow"></div>
+</div>
+            <div class="about-text" data-aos="fade-left">
+                <p class="animated-text">I am passionate software developer with experience in building web applications and solving complex problems. I specialize in creating efficient, scalable, and user-friendly solutions that drive business success.</p>
+                
+                <!-- Interactive Timeline -->
+                <div class="timeline-container">
+                    <h3>Education Journey</h3>
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-content glassmorphism">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4>Postgraduate Diploma in Information Technology</h4>
+                                <p><em>Vaal University of Technology</em></p>
+                                <p class="timeline-date">Graduated: 2024</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="timeline-content glassmorphism">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4>Bachelor's Degree in Information Technology</h4>
+                                <p><em>Vaal University of Technology</em></p>
+                                <p class="timeline-date">Graduated: 2023</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="timeline-content glassmorphism">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4>National Diploma</h4>
+                                <p><em>Vaal University of Technology</em></p>
+                                <p class="timeline-date">Graduated: 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-actions">
+                    <a href="Dembe_CV.pdf" download="Dembe_CV.pdf" class="cta-button">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="#skills" class="cta-button secondary">
+                        <i class="fas fa-code"></i> View Skills
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section light-background">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Skills</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="skills-container">
+            <!-- Technical Skills -->
+            <div class="skill-category glassmorphism" data-aos="fade-right">
+                <div class="category-header">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Technical Skills</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">HTML</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">CSS</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Java</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">.NET</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Javascript</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Visual Basic</span>
+                        <span class="skill-percent">50%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skill-category glassmorphism" data-aos="fade-left">
+                <div class="category-header">
+                    <i class="fas fa-users"></i>
+                    <h3>Soft Skills</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Good communication</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Active listening</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Teamwork</span>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Attention to detail</span>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Business acumen</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Collaboration</span>
+                        <span class="skill-percent">92%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 92%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Critical thinking</span>
+                        <span class="skill-percent">87%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 87%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Multitasking</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2>My Projects</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="projects-container">
+            <!-- Morse Code Translator -->
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-image-container">
+                    <img src="images/MorseCode.png" alt="Morse Code Translator Screenshot" class="project-screenshot">
+                    <div class="project-overlay">
+                        <a href="https://dembemakharii.github.io/Mose_Code_Translator/" class="project-preview" target="_blank">
+                            <i class="fas fa-eye"></i> Live Preview
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Morse Code Translator</h3>
+                    <p>A web application that translates text to Morse code and vice versa, with audio playback functionality and learning resources.</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Web Audio API</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://dembemakharii.github.io/Mose_Code_Translator/" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                        <a href="#" class="project-link secondary">
+                            <i class="fas fa-code"></i> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
             
-            <h3>Education Journey</h3>
-            <ul class="education-list">
-                <li>
-                    <strong>Postgraduate Diploma in Information Technology</strong><br>
-                    <em> Vaal University of Technology</em> - Graduated: <em>2024</em>
-                </li>
-                <li>
-                    <strong>Bachelor's Degree in Information Technology</strong><br>
-                    <em>Vaal University of Technology</em> - Graduated: <em>2023</em>
-                </li>
-                <li>
-                    <strong>National Diploma</strong><br>
-                    <em>Vaal University of Technology</em> - Graduated: <em>2021</em>
-                </li>
-            </ul>
+            <!-- Movie Database -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image-container">
+                    <img src="images/Screenshot (105).png" alt="Movie Database Screenshot" class="project-screenshot">
+                    <div class="project-overlay">
+                        <a href="https://cinescope-frontend-y9ee.onrender.com/" class="project-preview" target="_blank">
+                            <i class="fas fa-eye"></i> Live Preview
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Movie Database</h3>
+                    <p>A comprehensive movie database with search functionality, ratings, and personalized recommendations using TMDB API.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>REST API</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://cinescope-frontend-y9ee.onrender.com/" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                        <a href="#" class="project-link secondary">
+                            <i class="fas fa-code"></i> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Safety Reporting System -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image-container">
+                    <img src="images/Screenshot (104).png" alt="Safety Reporting System Screenshot" class="project-screenshot">
+                    <div class="project-overlay">
+                        <a href="https://classy-tartufo-d042e9.netlify.app/" class="project-preview" target="_blank">
+                            <i class="fas fa-eye"></i> Live Preview
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Safety Reporting System</h3>
+                    <p>A web-based platform for reporting and tracking safety incidents with form validation, data visualization, and export functionality.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Chart.js</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://classy-tartufo-d042e9.netlify.app/" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                        <a href="#" class="project-link secondary">
+                            <i class="fas fa-code"></i> Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <a href="Dembe_CV.pdf" download="Dembe_CV.pdf" class="cta-button">Download My CV</a>
-        </div>
-    </div>
-</section>
-<!-- Skills Section -->
-<section id="skills" class="skills-section light-background">
-    <h2>Skills</h2>
-    <div class="skills-container">
-        <!-- Technical Skills -->
-        <div class="skill-category">
-            <h3>Technical Skills</h3>
-            <div class="skill-item">
-                <span class="skill-name">HTML</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 80%;"></div>
-                </div>
-                <span class="skill-percent">80%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">CSS</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 75%;"></div>
-                </div>
-                <span class="skill-percent">75%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Python</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 85%;"></div>
-                </div>
-                <span class="skill-percent">85%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Java</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 70%;"></div>
-                </div>
-                <span class="skill-percent">70%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">SQL</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 90%;"></div>
-                </div>
-                <span class="skill-percent">85%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">.NET</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 65%;"></div>
-                </div>
-                <span class="skill-percent">80%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Javascript</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 60%;"></div>
-                </div>
-                <span class="skill-percent">75%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Visual Basic</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 50%;"></div>
-                </div>
-                <span class="skill-percent">90%</span>
-            </div>
-        </div>
-
-        <!-- Soft Skills -->
-        <div class="skill-category">
-            <h3>Soft Skills</h3>
-            <div class="skill-item">
-                <span class="skill-name">Good communication</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 90%;"></div>
-                </div>
-                <span class="skill-percent">90%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Active listening</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 85%;"></div>
-                </div>
-                <span class="skill-percent">85%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Teamwork</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 95%;"></div>
-                </div>
-                <span class="skill-percent">95%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Attention to detail</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 88%;"></div>
-                </div>
-                <span class="skill-percent">88%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Business acumen</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 75%;"></div>
-                </div>
-                <span class="skill-percent">85%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Collaboration</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 92%;"></div>
-                </div>
-                <span class="skill-percent">92%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Critical and analytical thinking</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 87%;"></div>
-                </div>
-                <span class="skill-percent">87%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Multitasking</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 80%;"></div>
-                </div>
-                <span class="skill-percent">80%</span>
-            </div>
-            <div class="skill-item">
-                <span class="skill-name">Integrity and confidentiality</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 98%;"></div>
-                </div>
-                <span class="skill-percent">98%</span>
-            </div>
-        </div>
-    </div>
-<!-- Projects Section -->
-<section id="projects" class="projects-section">
-    <h2>My Projects</h2>
-    <div class="projects-container">
-        <!-- Morse Code Translator -->
-        <div class="project-card">
-            <div class="project-image-container">
-                <img src="449234923-5c133fba-4c53-4084-8a3f-b41a419809ec.png" alt="Morse Code Translator Screenshot" class="project-screenshot">
-            </div>
-            <div class="project-info">
-                <h3>Morse Code Translator</h3>
-                <p>A web application that translates text to Morse code and vice versa, with audio playback functionality and learning resources.</p>
-                <div class="project-tech">
-                    <span>JavaScript</span>
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>Web Audio API</span>
-                </div>
-                <a href="https://dembemakharii.github.io/Mose_Code_Translator/" class="project-link" target="_blank">View Project</a>
-            </div>
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Certificates</h2>
+            <div class="section-divider"></div>
         </div>
         
-        <!-- Movie Database -->
-        <div class="project-card">
-            <div class="project-image-container">
-                <img src="Screenshot (105).png" alt="Movie Database Screenshot" class="project-screenshot">
-            </div>
-            <div class="project-info">
-                <h3>Movie Database</h3>
-                <p>A comprehensive movie database with search functionality, ratings, and personalized recommendations using TMDB API.</p>
-                <div class="project-tech">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>REST API</span>
+        <div class="certificates-slider" data-aos="fade-up">
+            <div class="glider-contain">
+                <div class="glider">
+                    <div class="certificate-item glassmorphism">
+                        <img src="images/micro.png" alt="Microsoft Icon" class="certificate-icon">
+                        <h4>Dynamic 365 Fundamentals</h4>
+                        <p>Microsoft</p>
+                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/DembeMakhari-1364/84DD4B5421B33124?sharingId=96B5030268F5E30" target="_blank" class="certificate-link">
+                            View Certificate <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="certificate-item glassmorphism">
+                        <img src="images/micro.png" alt="Microsoft Icon" class="certificate-icon">
+                        <h4>Azure AI Engineer Associate</h4>
+                        <p>Microsoft</p>
+                        <a href="https://learn.microsoft.com/en-us/users/dembemakhari-1364/credentials/certification/azure-ai-engineer?tab=credentials-tab" target="_blank" class="certificate-link">
+                            View Certificate <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="certificate-item glassmorphism">
+                        <img src="images/micro.png" alt="Microsoft Icon" class="certificate-icon">
+                        <h4>Azure Developer Associate</h4>
+                        <p>Microsoft</p>
+                        <a href="https://learn.microsoft.com/en-us/users/dembemakhari-1364/credentials/certification/azure-developer?tab=credentials-tab" target="_blank" class="certificate-link">
+                            View Certificate <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="certificate-item glassmorphism">
+                        <img src="images/micro.png" alt="Microsoft Icon" class="certificate-icon">
+                        <h4>Azure AI Fundamentals</h4>
+                        <p>Microsoft</p>
+                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/DembeMakhari-1364/54F91AA1453E2026?sharingId=96B5030268F5E30" target="_blank" class="certificate-link">
+                            View Certificate <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="certificate-item glassmorphism">
+                        <img src="images/cisco.png" alt="Cisco Icon" class="certificate-icon">
+                        <h4>Introduction to Cybersecurity</h4>
+                        <p>Cisco</p>
+                        <a href="https://www.credly.com/badges/e2a30792-b9e1-4e47-9fd4-c280df2bb188/public_url" target="_blank" class="certificate-link">
+                            View Certificate <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="certificate-item glassmorphism">
+                        <img src="images/Python.png" alt="Python Icon" class="certificate-icon">
+                        <h4>Python</h4>
+                        <p>IBM</p>
+                        <a href="https://www.credly.com/badges/c2711d2a-1d7e-453b-bf5e-648a71999c70?source=linked_in_profile" target="_blank" class="certificate-link">
+                            View Certificate <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <a href="https://cinescope-frontend-y9ee.onrender.com/" class="project-link" target="_blank">View Project</a>
+                <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                <div role="tablist" class="dots"></div>
             </div>
         </div>
-        
-        <!-- Safety Reporting System -->
-        <div class="project-card">
-            <div class="project-image-container">
-                <img src="Screenshot (104).png" alt="Safety Reporting System Screenshot" class="project-screenshot">
-            </div>
-            <div class="project-info">
-                <h3>Safety Reporting System</h3>
-                <p>A web-based platform for reporting and tracking safety incidents with form validation, data visualization, and export functionality.</p>
-                <div class="project-tech">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>Chart.js</span>
-                </div>
-                <a href="https://classy-tartufo-d042e9.netlify.app/" class="project-link" target="_blank">View Project</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Certificates Section -->
-<section id="certificates" class="certificates-section">
-    <h2>Certificates</h2>
-    
-    <p id="typewriter-text" class="typewriter">These are some of my certificates...</p>
-    <ul class="certificates-list">
-        <li>
-            <a href="#" data-issued-by="Microsoft" data-certificate-link="https://learn.microsoft.com/api/credentials/share/en-us/DembeMakhari-1364/84DD4B5421B33124?sharingId=96B5030268F5E30">
-                <img src="micro.png" alt="Microsoft Icon" class="certificate-icon">Dynamic 365 Fundamentals
-            </a>
-        </li>
-        <li>
-            <a href="#" data-issued-by="Microsoft" data-certificate-link="https://learn.microsoft.com/en-us/users/dembemakhari-1364/credentials/certification/azure-ai-engineer?tab=credentials-tab">
-                <img src="micro.png" alt="Microsoft Icon" class="certificate-icon">Azure AI Engineer Associate
-            </a>
-        </li>
-        <li>
-            <a href="#" data-issued-by="Microsoft" data-certificate-link="https://learn.microsoft.com/en-us/users/dembemakhari-1364/credentials/certification/azure-developer?tab=credentials-tab">
-                <img src="micro.png" alt="IBM Icon" class="certificate-icon">Azure Developer Associate
-            </a>
-        </li>
-        <li>
-            <a href="#" data-issued-by="Microsoft" data-certificate-link="https://learn.microsoft.com/api/credentials/share/en-us/DembeMakhari-1364/54F91AA1453E2026?sharingId=96B5030268F5E30">
-                <img src="micro.png" alt="IBM Icon" class="certificate-icon">Azure AI Fundamentals
-            </a>
-        </li> 
-        <li>
-            <a href="#" data-issued-by="Cisco" data-certificate-link="https://www.credly.com/badges/e2a30792-b9e1-4e47-9fd4-c280df2bb188/public_url">
-                <img src="cisco.png" alt="IBM Icon" class="certificate-icon">Introduction to Cybersecurity
-            </a>
-        </li>
-
-        <li>
-            <a href="#" data-issued-by="IBM" data-certificate-link="https://www.credly.com/badges/c2711d2a-1d7e-453b-bf5e-648a71999c70?source=linked_in_profile">
-                <img src="Python.png" alt="IBM Icon" class="certificate-icon">Python 
-            </a>
-        </li>
-
-        <li>
-            <a href="#" data-issued-by="IBM" data-certificate-link="https://www.credly.com/badges/15424927-7f73-4493-abcf-b12e72f31658?source=linked_in_profile">
-                <img src="ibm.png" alt="IBM Icon" class="certificate-icon">Data Science & Analytics Intro 
-            </a>
-        </li>
-
-        <li>
-            <a href="#" data-issued-by="IBM" data-certificate-link="https://www.credly.com/badges/636eb0c9-7f1c-43e1-9b3d-48c2802efc7c/linked_in_profile">
-                <img src="ibm.png" alt="IBM Icon" class="certificate-icon">Getting Started with Threat Intelligence Hunting 
-            </a>
-        </li>
-
-        <li>
-            <a href="#" data-issued-by="Fortinet" data-certificate-link="https://www.credly.com/badges/34818f25-ea87-442d-a464-b5170a41f3dc/linked_in_profile">
-                <img src="forti.png" alt="IBM Icon" class="certificate-icon">Fortinet Certified Fundamentals 
-            </a>
-        </li>
-
-        <li>
-            <a href="#" data-issued-by="Fortinet" data-certificate-link="https://www.credly.com/badges/0870dcec-c81d-4460-83b0-6afeca25870c/linked_in_profile">
-                <img src="forti.png" alt="IBM Icon" class="certificate-icon">Introduction to the Threat Landscape 2.0 
-            </a>
-        </li>
-    </ul>
-
-    <!-- Certificate Details Container -->
-    <div id="certificate-details" class="certificate-details">
-        <h3 id="certificate-title"></h3>
-        <p id="certificate-issued-by"></p>
-        <a id="certificate-link" href="#" target="_blank">View Certificate</a>
-    </div>
-</section>
-<!-- Styles for certificate icon -->
-<style>
-    .certificate-icon {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        vertical-align: middle;
-    }
-
-    .certificates-list li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .certificates-list a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: inherit;
-        padding: 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .certificates-list a:hover {
-        background-color: blue;
-        color: white;
-    }
-
-    /* Typewriter effect */
-    .typewriter {
-        font-family: Courier, monospace;
-        font-size: 24px;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid black; /* Cursor effect */
-        width: 0;
-        animation: typing 4s steps(40) 1s infinite, blink 0.75s step-end infinite;
-    }
-
-    /* Typing animation */
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-        to {
-            width: 100%;
-        }
-    }
-
-    /* Cursor blinking effect */
-    @keyframes blink {
-        50% {
-            border-color: transparent;
-        }
-    }
-</style>
-
-<!-- JavaScript for typewriter effect -->
-<script>
-    const textElement = document.getElementById('typewriter-text');
-    const text = textElement.textContent;
-    
-    let index = 0;
-    const typingSpeed = 100; // Speed of typing in milliseconds
-    const pauseDuration = 1000; // Duration to pause before restarting the animation
-    
-    // Function to animate the typing
-    function typeWriter() {
-        if (index < text.length) {
-            textElement.textContent = text.slice(0, index + 1); // Update the text
-            index++;
-            setTimeout(typeWriter, typingSpeed); // Continue typing
-        } else {
-            setTimeout(() => {
-                index = 0; // Reset to the beginning
-                typeWriter(); // Restart typing
-            }, pauseDuration); // Pause before restarting
-        }
-    }
-
-    // Start typing when the page loads
-    window.onload = typeWriter;
-</script>
-
-
+    </section>
 
     <!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <div class="contact-container">
-        <!-- Contact Info (Left Side) -->
-        <div class="contact-info">
-            <h2>Contact Info</h2>
-            <p>
-                <i class="fas fa-map-marker-alt"></i>
-                <a href="https://www.google.com/maps/place/Government+Ave,+Pretoria,+0002" target="_blank" style="color: inherit; text-decoration: none;">
-                    Government Ave, Pretoria, 0002
-                </a>
-            </p>
-            <p><i class="fas fa-envelope"></i> dmakhari6@gmail.com</p>
-            <p><i class="fas fa-phone"></i> Phone: +27 79 370 4009</p>
+    <section id="contact" class="contact-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Get In Touch</h2>
+            <div class="section-divider"></div>
         </div>
+        <div class="contact-container">
+            <!-- Contact Info (Left Side) -->
+        <div class="contact-form" data-aos="fade-left">
+                <h3>Contact Info</h3>
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <a href="https://www.google.com/maps/place/Government+Ave,+Pretoria,+0002" target="_blank">
+                            Government Ave, Pretoria, 0002
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:dmakhari6@gmail.com">dmakhari6@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <a href="tel:+27793704009">+27 79 370 4009</a>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <h4>Follow Me</h4>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/dembe-makhari-1a6a4b214/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/DembeMakharii" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@miraclebaby_" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Contact Form (Right Side) -->
-        <div class="contact-form">
-            <h2>Contact Me</h2>
-            <p class="h3 section-title">Interested in connecting? Send me a message.</p>
-            <form id="contactForm">
-                <input type="hidden" name="access_key" value="27715866-69a5-489f-adcd-ba33531e9110">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">SEND MESSAGE</button>
-                <div id="formStatus"></div>
-            </form>
+            <!-- Contact Form (Right Side) -->
+            <div class="contact-form glassmorphism" data-aos="fade-left">
+                <h3>Send Me a Message</h3>
+                <form id="contactForm">
+                    <input type="hidden" name="access_key" value="27715866-69a5-489f-adcd-ba33531e9110">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div id="formStatus"></div>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
-
-    <script>
- 
-        document.getElementById("contactForm").addEventListener("submit", async function(event) {
-         
-            event.preventDefault(); // 
-         
-         
-            const form = event.target;
-            const formData = new FormData(form);
-         
-         
-            const statusDiv = document.getElementById("formStatus");
-         
-            try {
-         
-                const response = await fetch("https://api.web3forms.com/submit", {
-                    method: "POST", 
-                    body: formData 
-                });
-         
-         
-                if (response.ok) {
-                    // Display success message and reset the form
-                    statusDiv.innerText = " Your Message  was sent successfully!";
-                    form.reset(); 
-         
-         
-                    setTimeout(() => {
-                        statusDiv.innerText = ""; 
-                    }, 3000);
-                } else {
-         
-                    statusDiv.innerText = "Something went wrong. Please try again.";
-                }
-            } catch (error) {
-         
-                statusDiv.innerText = "Error: " + error.message;
-            }
-        });
-         
-            </script>
+    </section>
 
     <!-- Chatbot -->
-<div class="chatbot">
-    <div class="chatbot-icon" onclick="toggleChat()">
-        <i class="fas fa-comments"></i>
-    </div>
-    <div class="chatbot-window">
-        <div class="chatbot-header">
-            <h3>Chatbot</h3>
-            <span onclick="toggleChat()" class="close-btn">&times;</span>
+    <div class="chatbot">
+        <div class="chatbot-icon" onclick="toggleChat()">
+            <i class="fas fa-comments"></i>
+            <span class="notification-badge">1</span>
         </div>
-        <div class="chatbot-body">
-            <div id="chatbot-messages"></div>
-        </div>
-        <div class="chatbot-input">
-            <input type="text" id="chatbot-input" placeholder="Type a message...">
-            <button onclick="sendMessage()">Send</button>
+        <div class="chatbot-window glassmorphism">
+            <div class="chatbot-header">
+                <div class="chatbot-avatar">
+                    <img src="images/Dembe.jpg" alt="Chatbot Avatar">
+                </div>
+                <div class="chatbot-info">
+                    <h3>Dembe's Assistant</h3>
+                    <p>Online</p>
+                </div>
+                <span onclick="toggleChat()" class="close-btn">&times;</span>
+            </div>
+            <div class="chatbot-body" id="chatbot-messages">
+                <div class="chat-message bot-message">
+                    <div class="message-content">
+                        Hello! I'm Dembe's virtual assistant. How can I help you today?
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
         </div>
     </div>
-</div>
-    <!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-content">
-        <p>&copy; 2025 Dembe Makhari. All rights reserved.</p>
-    </div>
-</footer>
 
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2025 Dembe Makhari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
