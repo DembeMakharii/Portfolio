@@ -69,7 +69,7 @@ AOS.init({
 // Initialize Typed.js for typing animation
 document.addEventListener('DOMContentLoaded', function() {
     const typed = new Typed('#typed', {
-        strings: ['Software Developer', 'Software Engineer', 'Salesforce Developer'],
+        strings: ['Software Developer', 'Software Engineer', 'Data Engineer Enthusiast'],
         typeSpeed: 50,
         backSpeed: 30,
         loop: true,
