@@ -489,21 +489,19 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
             <h2>Get In Touch</h2>
             <div class="section-divider"></div>
         </div>
         <div class="contact-container">
             <!-- Contact Info (Left Side) -->
-        <div class="contact-form" data-aos="fade-left">
+            <div class="contact-info">
                 <h3>Contact Info</h3>
                 <div class="contact-method">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <h4>Location</h4>
-                        <a href="https://www.google.com/maps/place/Government+Ave,+Pretoria,+0002" target="_blank">
-                            Government Ave, Pretoria, 0002
-                        </a>
+                        <a href="https://www.google.com/maps/place/Government+Ave,+Pretoria,+0002" target="_blank">Government Ave, Pretoria, 0002</a>
                     </div>
                 </div>
                 <div class="contact-method">
@@ -523,40 +521,30 @@
                 <div class="contact-social">
                     <h4>Follow Me</h4>
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/dembe-makhari-1a6a4b214/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/DembeMakharii" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@miraclebaby_" target="_blank">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+                        <a href="https://www.linkedin.com/in/dembe-makhari-1a6a4b214/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/DembeMakharii" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@miraclebaby_" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
 
             <!-- Contact Form (Right Side) -->
-            <div class="contact-form glassmorphism" data-aos="fade-left">
+            <div class="contact-form">
                 <h3>Send Me a Message</h3>
                 <form id="contactForm">
-                    <input type="hidden" name="access_key" value="27715866-69a5-489f-adcd-ba33531e9110">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <i class="fas fa-user"></i>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <i class="fas fa-envelope"></i>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <i class="fas fa-comment"></i>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">
-                        <span>Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
+                    <button type="submit" class="submit-btn">Send Message</button>
                     <div id="formStatus"></div>
                 </form>
             </div>
