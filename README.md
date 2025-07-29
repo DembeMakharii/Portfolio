@@ -2,8 +2,7 @@
 **HTML | CSS | JavaScript | Responsive Design**
 
 A professional portfolio website showcasing my skills, projects, certificates, and contact information. Built with modern web technologies and designed to be fully responsive across all devices.
-
-![Screenshot (107)](https://github.com/user-attachments/assets/c174bff3-0b6d-4391-9261-0977eaf1b2ba)
+<img width="1566" height="741" alt="Screenshot (103)" src="https://github.com/user-attachments/assets/4a18f721-f0e2-4a07-9830-5a65455c3ba2" />
 
 
 ## 📋 Table of Contents
